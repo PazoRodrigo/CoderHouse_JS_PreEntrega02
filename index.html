@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="CSS/style.css">
+    <title>Arrays Methods!!</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Arrays Methods</h1>
+    <p>Se visualizan 25 métodos por consola</p>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-3 mt-2 d-grid gap-1 pb-2 border border-info">
+                <h2 class="text-center">map</h2>
+                <p class="pl-2 text-start"style="height:120px;">Permite recorrer el array y modificar los elementos presentes en él, retornando
+                    un nuevo array con la misma longitud que el original.</p>
+                <button id="btnmap" class="btn btn-success">map</button>
+            </div>
+            <div class="col-3 mt-2 d-grid gap-1 pb-2 border border-info">
+                <h2 class="text-center">filter</h2>
+                <p class="pl-2 text-start"style="height:120px;">Recorre el array y retorna un nuevo array con aquellos elementos que pasen una
+                    determinada condición.</p>
+                <button id="btnfilter" class="btn btn-success">filter</button>
+            </div>
+            <div class="col-3 mt-2 d-grid gap-1 pb-2 border border-info">
+                <h2 class="text-center">forEach</h2>
+                <p class="pl-2 text-start"style="height:120px;">Permite iterar el contenido de un array. Recibe un callback que toma como
+                    parámetro el elemento actual de la iteración y el indice del mismo.</p>
+                <button id="btnforEach" class="btn btn-success">forEach</button>
+            </div>
+            <div class="col-3 mt-2 d-grid gap-1 pb-2 border border-info">
+                <h2 class="text-center">find</h2>
+                <p class="pl-2 text-start"style="height:120px;">Recorre el array y retorna la primera coincidencia del elemento que se busca.</p>
+                <button id="btnfind" class="btn btn-success">find</button>
+            </div>
+            <div class="col-3 mt-2 d-grid gap-1 pb-2 border border-info">
+                <h2 class="text-center">sort</h2>
+                <p class="pl-2 text-start"style="height:120px;">Ordena los elementos del array y retorna el arreglo ordenado. Los elementos se ordenarán en orden ascendente (de la A a la Z) por defecto.</p>
+                <button id="btnsort" class="btn btn-success">sort</button>
+            </div>
+            <div class="col-3 mt-2 d-grid gap-1 pb-2 border border-info">
+                <h2 class="text-center">some</h2>
+                <p class="pl-2 text-start"style="height:120px;">Itera el array y retorna un booleano si como mínimo uno de los elementos presentes en el array pasa una condición determinada. Recibe un callback que se encargara de preguntar aquello que queremos dentro del array.</p>
+                <button id="btnsome" class="btn btn-success">some</button>
+            </div>
+            <div class="col-3 mt-2 d-grid gap-1 pb-2 border border-info">
+                <h2 class="text-center">every</h2>
+                <p class="pl-2 text-start"style="height:120px;">Es similar al some(), ya que itera el array y retorna un booleano. Pero esta vez, para que dicho booleano sea true todos los elementos del array deberán pasar la condición dada.</p>
+                <button id="btnevery" class="btn btn-success">every</button>
+            </div>
+            <div class="col-3 mt-2 d-grid gap-1 pb-2 border border-info">
+                <h2 class="text-center">concat</h2>
+                <p class="pl-2 text-start"style="height:120px;">Se utiliza para unir dos o más arrays. Este método no cambia los arrays existentes, sino que devuelve un nuevo array.</p>
+                <button id="btnconcat" class="btn btn-success">concat</button>
+            </div>
+            <div class="col-3 mt-2 d-grid gap-1 pb-2 border border-info">
+                <h2 class="text-center">includes</h2>
+                <p class="pl-2 text-start"style="height:120px;">Determina si un array incluye un determinado elemento y retorna un booleano según corresponda.</p>
+                <button id="btnincludes" class="btn btn-success">includes</button>
+            </div>
+            <div class="col-3 mt-2 d-grid gap-1 pb-2 border border-info">
+                <h2 class="text-center">join</h2>
+                <p class="pl-2 text-start"style="height:120px;">Une todos los elementos de un array en una cadena. Podemos pasarle como parámetro el carácter de separación que debe agregar entre los elementos.</p>
+                <button id="btnjoin" class="btn btn-success">join</button>
+            </div>
+            <div class="col-3 mt-2 d-grid gap-1 pb-2 border border-info">
+                <h2 class="text-center">reduce</h2>
+                <p class="pl-2 text-start"style="height:120px;">Aplica una función a un acumulador y a cada valor de una array (de izquierda a derecha) para reducirlo a un único valor.</p>
+                <button id="btnreduce" class="btn btn-success">reduce</button>
+            </div>
+            <div class="col-3 mt-2 d-grid gap-1 pb-2 border border-info">
+                <h2 class="text-center">indexOf</h2>
+                <p class="pl-2 text-start"style="height:120px;">Retorna el primer índice en el que se puede encontrar un elemento dado en el array, ó retorna -1 si el elemento no esta presente.</p>
+                <button id="btnv" class="btn btn-success">indexOf</button>
+            </div>
+            <div class="col-3 mt-2 d-grid gap-1 pb-2 border border-info">
+                <h2 class="text-center">findIndex</h2>
+                <p class="pl-2 text-start"style="height:120px;">Retorna el índice del primer elemento de un array que cumpla con la función de prueba proporcionada. En caso contrario devuelve -1</p>
+                <button id="btnfindIndex" class="btn btn-success">findIndex</button>
+            </div>
+            <div class="col-3 mt-2 d-grid gap-1 pb-2 border border-info">
+                <h2 class="text-center">fill</h2>
+                <p class="pl-2 text-start"style="height:120px;">Cambia todos los elementos de un array por un valor estático, desde el índice de inicio hasta el índice final. Retorna el array modificado.</p>
+                <button id="btnfill" class="btn btn-success">fill</button>
+            </div>
+            <div class="col-3 mt-2 d-grid gap-1 pb-2 border border-info">
+                <h2 class="text-center">push</h2>
+                <p class="pl-2 text-start"style="height:120px;">Añade uno o más elementos al final de un array y devuelve la nueva longitud del array.</p>
+                <button id="btnpush" class="btn btn-success">push</button>
+            </div>
+            <div class="col-3 mt-2 d-grid gap-1 pb-2 border border-info">
+                <h2 class="text-center">pop</h2>
+                <p class="pl-2 text-start"style="height:120px;">Elimina el último elemento de un array y lo devuelve. Este método cambia la longitud del array.</p>
+                <button id="btnpop" class="btn btn-success">pop</button>
+            </div>
+            <div class="col-3 mt-2 d-grid gap-1 pb-2 border border-info">
+                <h2 class="text-center">shift</h2>
+                <p class="pl-2 text-start"style="height:120px;">Elimina el primer elemento del array y lo retorna. Este método modifica la longitud del array.</p>
+                <button id="btnshift" class="btn btn-success">shift</button>
+            </div>
+            <div class="col-3 mt-2 d-grid gap-1 pb-2 border border-info">
+                <h2 class="text-center">unshift</h2>
+                <p class="pl-2 text-start"style="height:120px;">Agrega uno o más elementos al inicio del array, y devuelve la nueva longitud del array.</p>
+                <button id="btnunshift" class="btn btn-success">unshift</button>
+            </div>
+            <div class="col-3 mt-2 d-grid gap-1 pb-2 border border-info">
+                <h2 class="text-center">slice</h2>
+                <p class="pl-2 text-start"style="height:120px;">Devuelve una copia de una parte del array dentro de un nuevo array empezando por inicio hasta fin (fin no incluido). El array original no se modificará.</p>
+                <button id="btnslice" class="btn btn-success">slice</button>
+            </div>
+            <div class="col-3 mt-2 d-grid gap-1 pb-2 border border-info">
+                <h2 class="text-center">reverse</h2>
+                <p class="pl-2 text-start"style="height:120px;">Invierte el orden de los elementos de un array. El primer elemento pasa a ser el último y el último pasa a ser el primero.</p>
+                <button id="btnreverse" class="btn btn-success">reverse</button>
+            </div>
+            <div class="col-3 mt-2 d-grid gap-1 pb-2 border border-info">
+                <h2 class="text-center">splice</h2>
+                <p class="pl-2 text-start"style="height:120px;">Cambia el contenido de un array eliminando elementos existentes y/o agregando nuevos elementos.</p>
+                <button id="btnsplice" class="btn btn-success">splice</button>
+            </div>
+            <div class="col-3 mt-2 d-grid gap-1 pb-2 border border-info">
+                <h2 class="text-center">lastIndexOf</h2>
+                <p class="pl-2 text-start"style="height:120px;">Busca un elemento en un array y devuelve su posición. Comienza buscando por el final del array. Retorna -1 si el elemento no se encontrara.</p>
+                <button id="btnlastIndexOf" class="btn btn-success">lastIndexOf</button>
+            </div>
+            <div class="col-3 mt-2 d-grid gap-1 pb-2 border border-info">
+                <h2 class="text-center">flat</h2>
+                <p class="pl-2 text-start"style="height:120px;">Crea una nuevo array con todos los elementos de sub-array concatenados recursivamente hasta la profundidad especificada</p>
+                <button id="btnflat" class="btn btn-success">flat</button>
+            </div>
+            <div class="col-3 mt-2 d-grid gap-1 pb-2 border border-info">
+                <h2 class="text-center">isArray</h2>
+                <p class="pl-2 text-start"style="height:120px;">Determina si el valor pasado es un Array.</p>
+                <button id="btnisArray" class="btn btn-success">isArray</button>
+            </div>
+            <div class="col-3 mt-2 d-grid gap-1 pb-2 border border-info">
+                <h2 class="text-center">from</h2>
+                <p class="pl-2 text-start"style="height:120px;">Crea una nueva instancia de Array a partir de un objeto iterable.</p>
+                <button id="btnfrom" class="btn btn-success">from</button>
+            </div>
+        </div>
+    </div>
+    <script src="arraysMethods.js"></script>
+</body>
+
+</html>
