@@ -35,6 +35,8 @@ function fnIncludes() {
   mostrarConsolaIncludes();
 }
 function fnJoin() {
+  LimpiarConsola();
+  mostrarConsolaJoin();
   let vector = [];
   let mensaje =
     "Join. Llenará el arreglo para luego agregarle que una los elementos";
@@ -56,9 +58,9 @@ function fnIndexOf() {
   LimpiarConsola();
   mostrarConsolaIndexOf();
 }
-function fnFindIndexOf() {
+function fnFindIndex() {
   LimpiarConsola();
-  mostrarConsolaFindIndexOf();
+  mostrarConsolaFindIndex();
 }
 function fnFill() {
   LimpiarConsola();
@@ -77,17 +79,17 @@ function fnPop() {
   let vector = [];
   let mensaje = "Pop. Llenará el arreglo para luego quitarle elementos";
   llenarVector(vector, mensaje);
-  do {
-    obj = prompt(
-      "longitud del Arreglo: " +
-        vector.length +
-        " Ingrese 'xx' para borrar elemento. '--' para terminar"
-    );
-    if (obj === "xx") {
-      vector.pop();
-      mostrarVectorResultante(vector);
-    }
-  } while (obj != "--" || vector.length == 0);
+  // do {
+  //   obj = prompt(
+  //     "longitud del Arreglo: " +
+  //       vector.length +
+  //       " Ingrese 'xx' para borrar elemento. '--' para terminar"
+  //   );
+  //   if (obj === "xx") {
+  //     vector.pop();
+  //     mostrarVectorResultante(vector);
+  //   }
+  // } while (obj != "--" || vector.length == 0);
 }
 function fnShift() {
   LimpiarConsola();

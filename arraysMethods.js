@@ -149,7 +149,7 @@ function mostrarConsolaIndexOf() {
 /*
 findIndex() : Retorna el índice del primer elemento de un array que cumpla con la función de prueba proporcionada. En caso contrario devuelve -1
 */
-function mostrarConsolaFindIndexOf() {
+function mostrarConsolaFindIndex() {
   console.log("------ findIndex()");
   const arrayFindIndex = ["Pedro", "Alberto", "Raquel", "Lorena"];
   console.log("arrayFindIndex", arrayFindIndex);
@@ -231,7 +231,7 @@ function mostrarConsolaReverse() {
   console.log("------ reverse()");
   const arrayReverse = [1, 2, 3, 4, 5, 6, 7, 8, 9];
   console.log("arrayReverse", arrayReverse);
-  const arrayReverseResult = arraySlice.reverse();
+  const arrayReverseResult = arrayReverse.reverse();
   console.log("arrayReverseResult", arrayReverseResult);
 }
 /*
