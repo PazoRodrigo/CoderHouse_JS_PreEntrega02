@@ -162,7 +162,7 @@ function TodosEnConsola() {
   mostrarConsolaJoin();
   mostrarConsolaReduce();
   mostrarConsolaIndexOf();
-  mostrarConsolaFindIndexOf();
+  mostrarConsolaFindIndex();
   mostrarConsolaFill();
   mostrarConsolaPush();
   mostrarConsolaPop();
